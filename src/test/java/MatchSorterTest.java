@@ -13,7 +13,7 @@ public class MatchSorterTest {
         List<Match> expectedMatches = new ArrayList<>();
         expectedMatches.add(new Match("A", "B"));
 
-        List<Match> actualMatches = new MatchSorter("2teams").generate();
+        List<Match> actualMatches = new MatchSorter("2teams").generateAllMatches();
 
         assertArrayEquals(expectedMatches.toArray(), actualMatches.toArray());
     }

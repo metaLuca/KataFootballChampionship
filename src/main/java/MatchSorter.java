@@ -12,12 +12,6 @@ public class MatchSorter {
         teams = new TeamList().loadFromResources(fileName);
     }
 
-    public List<Match> generate() {
-        return IntStream.range(1, teams.size()).filter(n -> n % 2 != 0)
-                .mapToObj(i -> new Match(teams.get(i - 1), teams.get(i)))
-                .collect(Collectors.toList());
-    }
-
     public List<Match> generateAllMatches() {
         for (String teamA:teams) {
             List<Match> newPermutations = teams.stream()
