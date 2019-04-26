@@ -16,7 +16,7 @@ public class TeamListTest {
         expectedTeams.add("B");
 
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("teams.txt").getFile());
+        File file = new File(classLoader.getResource("2teams").getFile());
 
         TeamList teamList = new TeamList();
         List<String> actualTeams = teamList.load(file);

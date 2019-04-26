@@ -31,4 +31,8 @@ public class Match {
     public int hashCode() {
         return Objects.hash(home, visitor);
     }
+
+    public boolean isBetween(String team1, String team2) {
+        return this.equals(new Match(team1, team2)) || this.equals(new Match(team2, team1));
+    }
 }
