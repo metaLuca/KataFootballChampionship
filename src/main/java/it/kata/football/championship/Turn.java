@@ -1,3 +1,5 @@
+package it.kata.football.championship;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -32,5 +34,14 @@ public class Turn {
     @Override
     public int hashCode() {
         return Objects.hash(matches);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder text = new StringBuilder();
+        for (Match match : matches) {
+            text.append("\t").append(match.toString()).append("\n");
+        }
+        return text.toString();
     }
 }

@@ -1,3 +1,5 @@
+package it.kata.football.championship;
+
 import java.util.Objects;
 
 public class Match {

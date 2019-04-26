@@ -1,3 +1,5 @@
+package it.kata.football.championship;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +8,7 @@ import java.util.stream.Collectors;
 public class TurnSorter {
     private final MatchSorter matchSorter;
     private final List<Match> turnsMatches;
-    private List<Turn> round = new ArrayList<>();
+    List<Turn> round = new ArrayList<>();
 
     public TurnSorter(String fileName) throws IOException {
         matchSorter = new MatchSorter(fileName);
