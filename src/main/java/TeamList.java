@@ -7,8 +7,6 @@ import java.util.stream.Collectors;
 
 public class TeamList {
     public List<String> load(File file) throws IOException {
-        List<String> teams = new ArrayList<>();
-        teams = Files.lines(file.toPath()).collect(Collectors.toList());
-        return teams;
+        return Files.lines(file.toPath()).collect(Collectors.toList());
     }
 }
