@@ -38,10 +38,6 @@ public class Match {
         return this.equals(new Match(team1, team2)) || this.equals(new Match(team2, team1));
     }
 
-    public boolean isWithTheSameTeams(Match match) {
-        return isBetween(match.home, match.visitor);
-    }
-
     public boolean containsAtLeatOneTeam(Match match) {
         return home.equals(match.home) ||
                 home.equals(match.visitor) ||

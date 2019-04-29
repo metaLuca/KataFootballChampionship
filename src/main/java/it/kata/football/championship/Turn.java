@@ -11,10 +11,6 @@ public class Turn {
         this.matches = matches;
     }
 
-    public boolean containsTeams(Match match) {
-        return matches.stream().anyMatch(m -> m.isWithTheSameTeams(match));
-    }
-
     public boolean containsMatch(Match match) {
         return matches.contains(match);
     }

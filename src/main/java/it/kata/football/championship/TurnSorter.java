@@ -6,13 +6,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class TurnSorter {
-    private final MatchSorter matchSorter;
     private final List<Match> turnsMatches;
     List<Turn> round = new ArrayList<>();
 
     public TurnSorter(String fileName) throws IOException {
-        matchSorter = new MatchSorter(fileName);
-        turnsMatches = matchSorter.generateAllTurnsMatches();
+        turnsMatches = new MatchSorter(fileName).generateAllTurnsMatches();
     }
 
     public List<Turn> generate() {
